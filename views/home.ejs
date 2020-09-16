@@ -1,0 +1,57 @@
+<%- include('partials/header'); -%> 
+
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('img/home-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>Merhaba ,Ben Yunus Emre</h1>
+            <span class="subheading">A Blog Theme by Start Bootstrap</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <% for(var i = 0;i < infos.length;i++){ %>
+    <div class="row">
+      <div class="col-lg-3  col-md-2 mx-auto">
+        <img class="img-thumbnail" src="<%= infos[i].postImg %>" alt="blog-images">
+      </div>
+      <div class="col-lg-9 col-md-10 mx-auto">
+        <div class="post-preview">
+          <a href="/post">
+            <h2 class="post-title">
+              <%= infos[i].postTitle %>
+            </h2>
+            <h3 class="post-subtitle">
+              <%= infos[i].postSubTitle %>
+            </h3>
+          </a>
+          <p class="post-meta">Posted by
+            <a href="#">Start Bootstrap</a>
+            on September 24, 2019</p>
+        </div>
+        <hr>
+  
+        <!-- Pager -->
+        
+      </div>
+    </div>
+    <% } %>
+    <div class="clearfix">
+      <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+    </div>
+  </div>
+
+  <hr>
+
+
+
+
+
+<%- include('partials/footer'); -%> 

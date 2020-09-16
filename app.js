@@ -7,7 +7,7 @@ const   express     =  require('express'),
 const homeRoutes=require('./routes/routes')
 
 
-app.set('view-engine','ejs');
+app.set('view engine','ejs');
 app.use(express.static('public'));
 
 
