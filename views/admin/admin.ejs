@@ -1,0 +1,36 @@
+<%- include('../partials/header'); -%> 
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('img/home-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>Admin Dashboard</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+</header>
+
+
+
+<div class="container">
+    <% for(var i = 0;i < adminAction.length;i++){ %>
+
+        <div class="row">
+            <div class="col-lg-4 mx-auto" >
+                <button id="<%=adminAction[i].actionID%>"  onclick="catchId(this.id)"  type="button" class="btn btn-outline-primary btn-block"><%= adminAction[i].displayName %> </button>
+            </div>
+        </div>
+    <% } %>
+</div>
+<script>
+  function catchId(click_id){
+    window.location.href='HomePage';
+    return false;
+  }
+
+</script>
+
+<%- include('../partials/footer'); -%> 
